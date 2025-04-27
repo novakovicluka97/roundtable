@@ -16,6 +16,6 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
     flowType: 'pkce',
     redirectTo: isDevelopment 
       ? 'http://localhost:5173' 
-      : 'https://roundtable-git-master-novakovicluka97s-projects.vercel.app/'
+      : 'https://roundtable-git-master-novakovicluka97s-projects.vercel.app'
   }
 });
