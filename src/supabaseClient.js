@@ -1,7 +1,12 @@
 import { createClient } from '@supabase/supabase-js';
 
-// Get the current environment
-const isDevelopment = process.env.NODE_ENV === 'development';
+// Get the current URL
+const getBaseUrl = () => {
+  if (typeof window !== 'undefined') {
+    return window.location.origin;
+  }
+  return 'http://localhost:5173'; // fallback for SSR
+};
 
 // Use different URLs based on environment
 const supabaseUrl = 'https://bvcukfllrjayptavsicx.supabase.co';
@@ -14,8 +19,6 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
     persistSession: true,
     detectSessionInUrl: true,
     flowType: 'pkce',
-    redirectTo: isDevelopment 
-      ? 'http://localhost:5173' 
-      : 'https://roundtable-git-master-novakovicluka97s-projects.vercel.app'
+    redirectTo: getBaseUrl()
   }
 });
