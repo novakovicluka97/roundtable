@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 4%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+
+    --radius: 0.25rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Cinzel", serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Cinzel", serif;
+    letter-spacing: 0.05em;
+  }
+}
+
+/* Custom styles for the Colosseum theme */
+body {
+  background-color: #000;
+  color: #e0dfd5;
+  overflow-x: hidden;
+  font-family: "Cinzel", serif;
+}
+
+/* Make links and buttons have a subtle glow on hover */
+a:hover,
+button:hover {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Particle animations */
+@keyframes twinkle {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(20px, 20px);
+  }
+  50% {
+    transform: translate(-20px, 40px);
+  }
+  75% {
+    transform: translate(-40px, 20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.twinkle {
+  animation: twinkle 3s infinite ease-in-out;
+}
+
+.float {
+  animation: float 15s infinite ease-in-out;
+}
+
+/* Add a simple pulse animation for particles */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse 4s infinite ease-in-out;
+}
+
+/* Add stars directly in CSS as a fallback */
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  overflow: hidden;
+  background-color: black;
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background-color: white;
+}
+
+/* Gladiator-inspired styles */
+.section-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #a19d94;
+}
+
+/* Distressed texture overlay */
+.texture-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.05' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.3;
+}
+
+/* Gladiator-inspired button styles */
+.btn-gladiator {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: 1px solid #a19d94;
+  background-color: transparent;
+  color: #e0dfd5;
+  transition: all 0.3s ease;
+}
+
+.btn-gladiator:hover {
+  background-color: rgba(161, 157, 148, 0.1);
+  box-shadow: 0 0 10px rgba(161, 157, 148, 0.3);
+}
+
+/* Import Cinzel font for Roman/Gladiator style */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap");

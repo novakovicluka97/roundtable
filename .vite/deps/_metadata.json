@@ -1,0 +1,43 @@
+{
+  "hash": "f3847427",
+  "configHash": "0353e586",
+  "lockfileHash": "832b735d",
+  "browserHash": "b7f67620",
+  "optimized": {
+    "@supabase/supabase-js": {
+      "src": "../../node_modules/@supabase/supabase-js/dist/module/index.js",
+      "file": "@supabase_supabase-js.js",
+      "fileHash": "340b2c7c",
+      "needsInterop": false
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "3d42c5d6",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "52adf104",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-D2KY6O3O": {
+      "file": "chunk-D2KY6O3O.js"
+    },
+    "browser-VLKRZ7RP": {
+      "file": "browser-VLKRZ7RP.js"
+    },
+    "chunk-C5A7FNJB": {
+      "file": "chunk-C5A7FNJB.js"
+    },
+    "browser-B5UES2FC": {
+      "file": "browser-B5UES2FC.js"
+    },
+    "chunk-V4OQ3NZ2": {
+      "file": "chunk-V4OQ3NZ2.js"
+    }
+  }
+}
