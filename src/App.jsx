@@ -11,6 +11,7 @@ function App() {
   const webhook_nietzche = 'https://marokanac.app.n8n.cloud/webhook/nietzche';
   const webhook_gandhi = 'https://marokanac.app.n8n.cloud/webhook/gandhi';
   const background_image = 'https://i.imgur.com/BIXbiuT.png';
+  const APP_VERSION = '1.0.1'; // Increment this with each change
 
   // Check auth state on mount
   useEffect(() => {
@@ -339,6 +340,9 @@ function App() {
           <p style={{ fontSize: '12px', opacity: 0.8, marginTop: '10px' }}>
             Join Elon and Socrates at the Round Table
           </p>
+          <p style={{ fontSize: '10px', opacity: 0.6, marginTop: '20px' }}>
+            Version {APP_VERSION}
+          </p>
         </div>
       </div>
     );
@@ -380,6 +384,9 @@ function App() {
         </button>
         <p style={{ fontSize: '12px', opacity: 0.8, marginTop: '20px' }}>
           Watch as Elon and Socrates debate your prompt at the Round Table
+        </p>
+        <p style={{ fontSize: '10px', opacity: 0.6, marginTop: '20px' }}>
+          Version {APP_VERSION}
         </p>
       </div>
     </div>

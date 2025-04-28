@@ -18,7 +18,7 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
     autoRefreshToken: true,
     persistSession: true,
     detectSessionInUrl: true,
-    flowType: 'pkce',
-    redirectTo: getBaseUrl()
+    flowType: 'implicit',
+    redirectTo: 'https://roundtable-git-master-novakovicluka97s-projects.vercel.app'
   }
 });
